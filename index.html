@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jan Hostettler</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bodybg {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .bodybg img {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%; /* This bit centers the image. */
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            overflow-x: hidden;
+        }
+
+        .email {
+            position: absolute;
+            bottom: 20px;
+            bottom: calc(15px + 1vw);
+            right: 20px;
+            right: calc(15px + 1vw);
+            font-size: 25px;
+            font-size: calc(15px + 1vw);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+<div class="bodybg">
+    <img src="img/janhostettler.jpg"
+	 srcset="img/janhostettler_2550.jpg 2550w, img/janhostettler_1920.jpg 1920w, img/janhostettler_1440.jpg 1440w, img/janhostettler_768.jpg 768w, img/janhostettler_480.jpg 480w"
+         alt="Jan Hostettler">
+	<a href="https://enable-javascript.com/de/" class="email" id="email">Javascript aktivieren um Emailadresse zu sehen
+        (Spamschutz)</a>
+</div>
+<script>
+    (function () {
+        var el = document.getElementById('email');
+        var m = window.atob('bWFpbEBqYW5ob3N0ZXR0bGVyLmNo');
+
+        el.innerText = m;
+        el.href = 'mailto:' + m;
+    })();
+</script>
+</body>
+
+</html>
